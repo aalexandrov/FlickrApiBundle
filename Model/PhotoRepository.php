@@ -24,10 +24,10 @@ class PhotoRepository
             $photo = new Photo();
             $photo->setId((string)$attributes['id']);
             $photo->setUrl('http://www.flickr.com/'.$attributes['pathalias'].'/'.$attributes['id']);
-            $photo->setTitle($attributes['title']);
+            $photo->setTitle((string)$attributes['title']);
             $photo->setDescription('');
-            $photo->setPreview($attributes['url_'.$preview_size]);
-            $photo->setImage($attributes['url_'.$image_size]);
+            $photo->setPreview((string)$attributes['url_'.$preview_size]);
+            $photo->setImage((string)$attributes['url_'.$image_size]);
 
             $photos[] = $photo;
 
