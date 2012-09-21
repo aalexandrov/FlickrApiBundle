@@ -16,7 +16,7 @@
 
   <target name="phpunit" description="Run unit tests with PHPUnit">
     <exec executable="${phpunit.executable}" failonerror="true">
-      <arg line=" -c ." />
+      <arg line=" -c . --log-junit ${basedir}/prova.xml" />
     </exec>
   </target>
 
