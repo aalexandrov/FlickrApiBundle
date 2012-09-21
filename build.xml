@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project name="FlickrApiBundle" default="build">
+  <property file="default.properties" />
  
- <target name="build" depends="phpunit, phpcs-ci"/>
+  <target name="build" depends="phpunit, phpcs-ci"/>
 
- <target name="phpcs-ci" description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
-  <exec executable="phpcs">
-   <arg line="--report=checkstyle 
-              --report-file=${basedir}/checkstyle.xml
-              --standard=PSR2
-              ." />
-  </exec>
- </target>
+  <target name="phpcs-ci" description="Find coding standard violations using PHP_CodeSniffer creating a log file for the continuous integration server">
+    <exec executable="${phpcs.executable}">
+     <arg line="--report=checkstyle 
+                --report-file=${basedir}/checkstyle.xml
+                --standard=PSR2
+                ." />
+    </exec>
+  </target>
 
- <target name="phpunit" description="Run unit tests with PHPUnit">
-  <exec executable="phpunit" failonerror="true">
-    <arg line=" -c ." />
-  </exec>
- </target>
+  <target name="phpunit" description="Run unit tests with PHPUnit">
+    <exec executable="phpunit" failonerror="true">
+      <arg line=" -c ." />
+    </exec>
+  </target>
 
 </project>
