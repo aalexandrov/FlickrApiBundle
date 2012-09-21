@@ -35,7 +35,7 @@ class FlickrApiTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('http://farm2.static.flickr.com/1134/4609025198_196fbbd66d_m.jpg', $photo_url);
     }
 
-    public function testGetPhotoSet()
+    public function testGetSinglePhotoSet()
     {
         $photo_set = $this->wrapper->getPhotoSet('72157623940754473');
 
