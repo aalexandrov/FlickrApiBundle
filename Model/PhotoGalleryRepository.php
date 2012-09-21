@@ -58,7 +58,7 @@ class PhotoGalleryRepository
      * @param string $photogallery_id
      * @return PhotoGallery
      */
-    public function getPhotoGallery($photogallery_id, $image_size = 'sq')
+    public function getPhotoGallery($photogallery_id, $preview_size = 'sq', $image_size = 'sq')
     {
         $album_xml = $this->flickr_api->getPhotoSet($photogallery_id);
 
@@ -66,7 +66,7 @@ class PhotoGalleryRepository
         {
             $photogallery = $this->buildPhotogalleryFromXml($album_xml);
             $photogallery->setId($photogallery_id);
-            $photogallery->setPhotos($this->photo_repository->getPhotosFromXml($album_xml->photos, $image_size));
+            $photogallery->setPhotos($this->photo_repository->getPhotosFromXml($album_xml->photos, $preview_size, $image_size));
 
             return $photogallery;
         }
@@ -79,15 +79,15 @@ class PhotoGalleryRepository
      * @param int $limit
      * @return array
      */
-    public function getLatestPhotos($limit = 9)
+    public function getLatestPhotos($limit = 9, $preview_size = 'sq', $image_size = 'sq')
     {
         $photos_xml = $this->flickr_api->getRecentPhotos($limit);
         if (\is_null($photos_xml))
         {
             return array();
         }
-
-        $photos = $this->photo_repository->getPhotosFromXml($photos_xml, 'sq', 'sq');
+        
+        $photos = $this->photo_repository->getPhotosFromXml($photos_xml, $preview_size, $image_size);
         foreach ($photos as $photo)
         {
             $contexts = $this->flickr_api->getAllContexts($photo->getId());
