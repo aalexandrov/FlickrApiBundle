@@ -1,0 +1,28 @@
+{
+    "name": "ideato/flickr-api-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony Flickr Api",
+    "keywords": ["flickr api photo"],
+    "homepage": "http://www.ideato.it/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Filippo De Santis",
+            "email": "fd@ideato.it"
+        },
+        {
+            "name": "Community",
+            "homepage": "https://github.com/ideatosrl/FlickrApiBundle/graphs/contributors"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-0": { "Ideato\\FlickrApiBundle": "" }
+    },
+    "target-dir": "Ideato/FlickrApiBundle"
+}
