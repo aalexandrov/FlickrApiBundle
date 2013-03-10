@@ -1,14 +1,36 @@
 Ideato\FlickrApiBundle
 ========================
 
+Install
+--------
+
+ * Install with composer:
+
+        #composer.json
+        "require": {
+            ...
+            "ideato/flickr-api-bundle": "dev-master",
+            ...
+        }
+        
+
+ * Add the bundle to your appKErnel
+
+        #app/AppKernel.php
+        $bundles = array(
+            ...
+            new Ideato\FlickrApiBundle\FlickrApiBundle(),
+        );
+        
+
 How to use it
 --------------
 
  * Add the api_key and the user_id as parameters in yout services configuration:
 
         <parameters>
-            <parameter key="flickr_api.user_id">44774306@N00</parameter>
-            <parameter key="flickr_api.api_key">a6d472134d5877b51a38070c7c631956</parameter>
+            <parameter key="flickr_api.user_id">abc</parameter>
+            <parameter key="flickr_api.api_key">abcdefg</parameter>
         </parameters>
 
  * To retrieve the photo sets in your controller:
