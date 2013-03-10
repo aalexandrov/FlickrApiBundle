@@ -11,6 +11,10 @@
             "email": "fd@ideato.it"
         },
         {
+            "name": "Leonardo proietti",
+            "email": "leonardo.proietti@gmail.com"
+        },
+        {
             "name": "Community",
             "homepage": "https://github.com/ideatosrl/FlickrApiBundle/graphs/contributors"
         }
