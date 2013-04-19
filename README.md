@@ -89,11 +89,3 @@ and to diplay it:
 
 $limit default is 9
 
-
-**Update 2011-08-26**
-
-* Added a way to run the tests outside a symfony2 project:
-
-
-    phpunit -c .
-
