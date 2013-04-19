@@ -1,0 +1,66 @@
+{
+    "hash": "eb2804b4e40259efd2cd5f770231a942",
+    "packages": [
+        {
+            "name": "ideato/flickr-api",
+            "version": "dev-master",
+            "target-dir": "Ideato/FlickrApi",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ideatosrl/FlickrApi.git",
+                "reference": "8f491522b440fed50d8bbaefa55e9b65a31aba22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ideatosrl/FlickrApi/zipball/8f491522b440fed50d8bbaefa55e9b65a31aba22",
+                "reference": "8f491522b440fed50d8bbaefa55e9b65a31aba22",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Ideato\\FlickrApi": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Filippo De Santis",
+                    "email": "fd@ideato.it"
+                },
+                {
+                    "name": "Community",
+                    "homepage": "https://github.com/ideatosrl/FlickrApi/graphs/contributors"
+                }
+            ],
+            "description": "Flickr Api",
+            "homepage": "http://www.ideato.it/",
+            "keywords": [
+                "flickr api photo"
+            ],
+            "time": "2013-03-10 14:49:17"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "ideato/flickr-api": 20
+    },
+    "platform": {
+        "php": ">=5.3.3"
+    },
+    "platform-dev": [
+
+    ]
+}
